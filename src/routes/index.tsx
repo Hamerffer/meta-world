@@ -1,7 +1,7 @@
 import AboutScreen from '@/components/about-screen'
 import BottomNav from '@/components/bottom-nav' 
 import ChartsScreen from '@/components/charts-screen'
-
+import ManageAccount from '@/components/manage-account'
 import EconomicCalendarScreen from '@/components/economic-calendar-screen'
 import HistoryScreen from '@/components/history-screen'
 import JournalScreen from '@/components/journal-screen'
@@ -33,6 +33,7 @@ type Screen =
   | "mql5"
   | "user-guide"
   | "about"
+  | "manage-account"
 
 
 export const Route = createFileRoute('/')({
@@ -69,6 +70,7 @@ function App() {
         {activeScreen === "user-guide" && <UserGuideScreen onMenuClick={() => setIsMenuOpen(true)} />}
         {activeScreen === "about" && <AboutScreen onMenuClick={() => setIsMenuOpen(true)} />}
         {activeScreen === "messages" && <Messages onMenuClick={() => setIsMenuOpen(true)} />}
+        {activeScreen === "manage-account" && <ManageAccount onMenuClick={() => setIsMenuOpen(true)} />}
       </div>
      <BottomNav
         activeTab={

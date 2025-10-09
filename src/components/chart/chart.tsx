@@ -3,7 +3,7 @@ import { createChart, ColorType, CandlestickSeries } from "lightweight-charts";
 import { getmockadata } from "./api/chart-api";
 
 interface CandleData {
-  time: string |number;
+  time: string |number ;
   open: number;
   high: number;
   low: number;

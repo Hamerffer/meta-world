@@ -16,9 +16,9 @@ const config = defineConfig({
     tanstackStart(),
     viteReact(),
   ],
-  server:{
-    host:"0.0.0.0"
-  }
+  server: {
+    host: "0.0.0.0",
+  },
 });
 
 export default config;

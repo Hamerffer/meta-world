@@ -46,7 +46,7 @@ export default function SideMenu({ isOpen, onClose, onNavigate }: SideMenuProps)
         {/* Header */}
         <div className="relative px-4 py-3 border-b border-border/40">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-foreground font-bold text-lg">
               QA
             </div>
             <div className="flex-1">
@@ -55,7 +55,7 @@ export default function SideMenu({ isOpen, onClose, onNavigate }: SideMenuProps)
             </div>
            
           </div>
-          <button className="text-primary text-sm mt-2 hover:underline">Manage accounts</button>
+          <button className="text-primary text-sm mt-2 hover:underline"     onClick={() => handleMenuClick('manage-account')}>Manage accounts</button>
         </div>
 
         {/* Menu Items */}
@@ -71,7 +71,7 @@ export default function SideMenu({ isOpen, onClose, onNavigate }: SideMenuProps)
               {item.badge && (
                 <span
                   className={`ml-auto text-xs font-semibold px-2 py-0.5 rounded ${
-                    item.badge === "Ads" ? "bg-primary/20 text-primary" : "bg-destructive text-white"
+                    item.badge === "Ads" ? "bg-primary/20 text-primary" : "bg-destructive text-foreground"
                   }`}
                 >
                   {item.badge}
